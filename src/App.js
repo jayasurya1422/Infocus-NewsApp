@@ -7,7 +7,7 @@ import Favorites from './components/Favorites';
 import Footer from './components/Footer';
 import './App.css';
 
-const API_KEY = process.env.REACT_APP_NEWS_API_KEY; // Accessing API_KEY from environment variables
+const API_KEY = process.env.REACT_APP_NEWS_API_KEY;
 const BASE_URL = 'https://newsapi.org/v2';
 
 function App() {
@@ -52,7 +52,7 @@ function App() {
       };
       fetchArticles();
     }
-  }, [category, currentPage, showFavorites]); // Dependencies without API_KEY
+  }, [category, currentPage, showFavorites]);
 
   const handleAddToFavorites = (article) => {
     if (!favorites.some(fav => fav.url === article.url)) {
